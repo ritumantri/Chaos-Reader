@@ -12,6 +12,18 @@
             line-height: 1.4;
         }
 
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        
+        body {
+            scrollbar-width: none;
+        }
+        
+        body {
+            -ms-overflow-style: none;
+        }
+
         .progress-container {
             position: fixed;
             top: 0;
