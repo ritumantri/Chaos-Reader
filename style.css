@@ -1,0 +1,139 @@
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 100%;
+            overflow-x: hidden;
+            line-height: 1.2; /* Reduced line spacing */
+        }
+
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: #f8f8f8;
+            z-index: 999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #000000;
+            transition: width 0.1s ease;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #000;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .article {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            max-width: 100%;
+            margin-bottom: 100px;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+        }
+
+        .chaos-zone {
+            position: relative;
+        }
+
+        .word {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.2s ease;
+            padding: 2px;
+            border: 2px solid transparent;
+        }
+
+        .highlight-box {
+            position: absolute;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .char {
+            display: inline-block;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        /* Zone 1: Subtle effects */
+        .zone-1 .word:hover {
+            font-style: italic;
+            color: #000FFF;
+        }
+
+        /* Zone 2: Medium effects */
+        .zone-2 .word:hover {
+            font-weight: bold;
+            color: #00FF03;
+            transform: scale(1.1);
+        }
+
+        /* Zone 3: Enhanced effects */
+        .zone-3 .word:hover {
+            font-style: italic;
+            font-weight: bold;
+            color: #EE0078;
+        }
+
+        /* Zone 4: Character level effects */
+        .zone-4 .char:hover {
+            font-style: italic;
+            transform: translateY(-3px);
+            color: #000FFF;
+        }
+
+        /* Zone 5: Extreme chaos */
+        .zone-5 .char:hover {
+            transform: scale(1.2);
+            color: #00FF03;
+        }
+
+        .glitch {
+            animation: glitch 0.3s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        .jitter {
+            animation: jitter 0.1s infinite;
+        }
+
+        @keyframes jitter {
+            0% { transform: translate(0) }
+            25% { transform: translate(1px, 1px) }
+            50% { transform: translate(-1px, -1px) }
+            75% { transform: translate(-1px, 1px) }
+            100% { transform: translate(0) }
+        }
