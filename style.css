@@ -42,7 +42,7 @@
         }
 
         h1 {
-            font-size: clamp(5.1rem, 10vw, 9.2rem);
+            font-size: clamp(5.1rem, 10vw, 9.4rem);
             font-weight: 900;
             line-height: 1;
             margin-bottom: 20px;
