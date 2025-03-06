@@ -19,12 +19,9 @@ function initTone() {
 // Attempt to load Tone
 window.addEventListener('load', initTone);
 
-
-function getColorFromPalette(zoneIndex) {
+function getColorFromPalette() {
     const palette = ['#000FFF', '#00FF03', '#EE0078'];
-    
-    // For consistency within a zone but variation between zones
-    return palette[zoneIndex % palette.length];
+    return palette[Math.floor(Math.random() * palette.length)];
 }
 
 // Manual text splitting function
