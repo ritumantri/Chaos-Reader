@@ -86,7 +86,7 @@
         }
 
         .char {
-            display: inline;
+            display: inline-block;
             position: relative;
             transition: all 0.2s ease;
         }
